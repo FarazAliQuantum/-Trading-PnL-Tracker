@@ -1,73 +1,162 @@
-# React + TypeScript + Vite
+🚀 Features
+✅ Authentication
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Login & Register pages
 
-Currently, two official plugins are available:
+Context-based auth handling
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Clean UI with AuthBackground, LoginForm, RegisterForm
 
-## React Compiler
+📈 Dashboard
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Daily PnL entry form (AddTradeForm)
 
-## Expanding the ESLint configuration
+Interactive charts:
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Performance Line Chart
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+Win/Loss Ratio Chart
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+Monthly Bar Chart
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Summary metrics including total PnL, average return, win rate, etc.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Sidebar + Header layout
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Trade history table with sorting + pagination
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+🎨 Design & UI
+
+Modern dashboard styling
+
+Clean layout with TailwindCSS
+
+Reusable UI elements powered by shadcn/ui
+
+Light/Dark Theme (via ThemeContext)
+
+Mobile responsive
+
+🗄️ Data Handling
+
+Mock data support
+
+TradeContext for global trade state
+
+Utils for formatting, calculations, and chart processing
+
+📁 Project Structure
+trading-pnl-tracker/
+├── src/
+│   ├── components/
+│   │   ├── auth/
+│   │   │   ├── AuthBackground.tsx
+│   │   │   ├── LoginForm.tsx
+│   │   │   └── RegisterForm.tsx
+│   │   ├── charts/
+│   │   │   ├── PerformanceChart.tsx
+│   │   │   ├── WinLossChart.tsx
+│   │   │   └── MonthlyBarChart.tsx
+│   │   ├── dashboard/
+│   │   │   ├── AddTradeForm.tsx
+│   │   │   ├── Header.tsx
+│   │   │   ├── Sidebar.tsx
+│   │   │   ├── StatCard.tsx
+│   │   │   ├── SummaryMetrics.tsx
+│   │   │   └── TradeHistoryTable.tsx
+│   │   └── ui/              # shadcn/ui components
+│   ├── contexts/
+│   │   ├── AuthContext.tsx
+│   │   ├── ThemeContext.tsx
+│   │   └── TradeContext.tsx
+│   ├── data/
+│   │   └── mockData.ts
+│   ├── lib/
+│   │   └── utils.ts
+│   ├── pages/
+│   │   ├── AuthPage.tsx
+│   │   └── DashboardPage.tsx
+│   ├── types/
+│   │   └── index.ts
+│   ├── App.tsx
+│   ├── index.css
+│   └── main.tsx
+├── index.html
+├── package.json
+├── tailwind.config.js
+├── tsconfig.json
+└── vite.config.ts
+
+🛠️ Tech Stack
+Frontend
+
+React + TypeScript
+
+Vite
+
+TailwindCSS
+
+shadcn/ui
+
+Recharts / Chart.js
+
+State Management
+
+Context API (Auth, Theme, Trade)
+
+Other
+
+LocalStorage / Mock Data
+
+Utility functions for formatting and analytics
+
+🧩 Getting Started
+1️⃣ Install dependencies
+npm install
+
+2️⃣ Run the development server
+npm run dev
+
+3️⃣ Build for production
+npm run build
+
+4️⃣ Preview production build
+npm run preview
+
+📦 Deployment
+Frontend (Recommended: Vercel)
+
+Connect GitHub repo
+
+Auto-build with Vite
+
+No special config needed
+
+Backend (Optional Future Upgrade)
+
+Use any of these:
+
+Render
+
+Railway
+
+Supabase
+
+Firebase
+
+📘 Future Enhancements
+
+Real user authentication with JWT
+
+Database integration (PostgreSQL / MongoDB)
+
+Import/export trades as CSV
+
+Automated analytics insights
+
+Mobile app version using React Native
+
+❤️ Contribution
+
+Feel free to fork, modify, and improve.
+Pull requests are welcome.
