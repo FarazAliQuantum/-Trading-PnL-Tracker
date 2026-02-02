@@ -44,8 +44,6 @@ Mock data support
 TradeContext for global trade state
 
 Utils for formatting, calculations, and chart processing
-
-📁 Project Structure
 trading-pnl-tracker/
 ├── src/
 │   ├── components/
@@ -64,7 +62,7 @@ trading-pnl-tracker/
 │   │   │   ├── StatCard.tsx
 │   │   │   ├── SummaryMetrics.tsx
 │   │   │   └── TradeHistoryTable.tsx
-│   │   └── ui/              # shadcn/ui components
+│   │   └── ui/                # shadcn/ui components
 │   ├── contexts/
 │   │   ├── AuthContext.tsx
 │   │   ├── ThemeContext.tsx
@@ -86,10 +84,6 @@ trading-pnl-tracker/
 ├── tailwind.config.js
 ├── tsconfig.json
 └── vite.config.ts
-🛠️ Tech Stack
-Frontend
-
-React + TypeScript
 
 Vite
 
