@@ -1,6 +1,6 @@
 🚀 Features
 ✅ Authentication
-
+https://primetrade-analytics.netlify.app/
 Login & Register pages
 
 Context-based auth handling
