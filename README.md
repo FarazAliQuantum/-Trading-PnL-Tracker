@@ -86,7 +86,6 @@ trading-pnl-tracker/
 ├── tailwind.config.js
 ├── tsconfig.json
 └── vite.config.ts
-
 🛠️ Tech Stack
 Frontend
 
